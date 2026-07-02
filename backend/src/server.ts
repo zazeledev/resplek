@@ -254,3 +254,5 @@ app.post('/api/contact', submitContactHandler);
 app.listen(PORT, () => {
   console.log(`ResPlek Express API running on http://localhost:${PORT}`);
 });
+
+export default app;
