@@ -314,7 +314,7 @@ export const Listings: React.FC = () => {
       </div>
 
       {/* Main Grid: Map + Listings */}
-      <div className="grid-cols-2" style={{ gridTemplateColumns: '45% 55%', gap: '30px' }}>
+      <div className="listings-split">
         
         {/* Map column */}
         <div style={{ height: 'calc(100vh - 280px)', minHeight: '400px', position: 'sticky', top: '110px' }}>

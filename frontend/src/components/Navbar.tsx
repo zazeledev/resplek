@@ -97,20 +97,22 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             )}
           </button>
 
-          {user ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <NavLink to="/dashboard" className="nav-link" style={{ fontWeight: 600 }}>
-                Dashboard
+          <div className="nav-auth-desktop">
+            {user ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <NavLink to="/dashboard" className="nav-link" style={{ fontWeight: 600 }}>
+                  Dashboard
+                </NavLink>
+                <button onClick={handleLogout} className="btn-secondary" style={{ padding: '4px 12px', fontSize: '0.9rem' }}>
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <NavLink to="/login" className="nav-btn">
+                Login
               </NavLink>
-              <button onClick={handleLogout} className="btn-secondary" style={{ padding: '4px 12px', fontSize: '0.9rem' }}>
-                Logout
-              </button>
-            </div>
-          ) : (
-            <NavLink to="/login" className="nav-btn">
-              Login
-            </NavLink>
-          )}
+            )}
+          </div>
 
           <button className="hamburger" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation menu">
             {isOpen ? '✕' : '☰'}
