@@ -374,35 +374,9 @@ export const Listings: React.FC = () => {
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {listings.map((l) => (
-                <div 
-                  key={l.id} 
-                  style={{
-                    backgroundColor: 'var(--card-bg)',
-                    border: '1px solid var(--border-color)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: '24px',
-                    display: 'flex',
-                    gap: '20px',
-                    boxShadow: 'var(--shadow-sm)',
-                    transition: 'box-shadow 0.2s',
-                    position: 'relative'
-                  }}
-                >
+                <div key={l.id} className="listing-card">
                   {/* Thumb image with gallery action */}
-                  <div 
-                    onClick={() => openGallery(l.images, 0)}
-                    style={{
-                      width: '140px',
-                      height: '110px',
-                      borderRadius: 'var(--radius-sm)',
-                      overflow: 'hidden',
-                      flexShrink: 0,
-                      backgroundColor: 'var(--bg-light)',
-                      border: '1px solid var(--border-color)',
-                      cursor: 'pointer',
-                      position: 'relative'
-                    }}
-                  >
+                  <div onClick={() => openGallery(l.images, 0)} className="listing-card-thumb">
                     <img 
                       src={l.images[0] || '/images/logo.png'} 
                       alt={l.title} 
@@ -455,7 +429,7 @@ export const Listings: React.FC = () => {
                   </div>
 
                   {/* Action states */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', justifyContent: 'center', flexShrink: 0, minWidth: '130px' }}>
+                  <div className="listing-card-actions">
                     {l.status === 'Taken for 2026' ? (
                       <div style={{
                         backgroundColor: 'rgba(220, 53, 69, 0.12)',

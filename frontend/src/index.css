@@ -631,6 +631,39 @@ a:hover {
   gap: 30px;
 }
 
+.listing-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.listing-card-thumb {
+  width: 140px;
+  height: 110px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  position: relative;
+}
+
+.listing-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 130px;
+}
+
 .mobile-nav-drawer {
   display: none;
 }
@@ -740,6 +773,20 @@ a:hover {
     height: 300px !important;
     min-height: 300px !important;
     order: 2;
+  }
+  .listing-card {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+  .listing-card-thumb {
+    width: 100% !important;
+    height: 180px !important;
+  }
+  .listing-card-actions {
+    min-width: 100% !important;
+    width: 100% !important;
+    margin-top: 10px !important;
   }
   .grid-cols-2, .grid-cols-3 {
     grid-template-columns: 1fr;

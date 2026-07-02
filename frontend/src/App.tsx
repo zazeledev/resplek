@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
+import ScrollToTop from './components/ScrollToTop';
 
 // Page Components
 import Home from './pages/Home';
@@ -35,6 +36,7 @@ export const App: React.FC = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="app-container">
         {/* Global Navbar */}
         <Navbar theme={theme} toggleTheme={toggleTheme} />
