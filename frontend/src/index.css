@@ -805,3 +805,103 @@ a:hover {
     right: 20px;
   }
 }
+
+/* About Page Custom Layouts */
+.about-split {
+  display: flex;
+  gap: 50px;
+}
+
+.about-split-left {
+  flex: 0 0 35%;
+}
+
+.about-split-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-values-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-value-item {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-value-item:last-child {
+  border-bottom: none;
+}
+
+.about-value-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 119, 204, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.about-team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-team-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 119, 204, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--border-color);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.about-team-member:hover .about-team-avatar {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .about-split {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-split-left {
+    flex: none;
+    width: 100%;
+  }
+  .about-team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-value-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
